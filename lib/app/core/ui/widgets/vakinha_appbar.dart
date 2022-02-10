@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class VakinhaAppBar extends AppBar {
-  VakinhaAppBar({
+class VakinhaAppbar extends AppBar {
+  VakinhaAppbar({
     Key? key,
     double elevation = 2,
   }) : super(

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_utils/src/extensions/context_extensions.dart';
+import 'package:get/utils.dart';
 
-class VakinhaTextFormField extends StatelessWidget {
+class VakinhaTextformfield extends StatelessWidget {
   final String label;
   final TextEditingController? controller;
   final bool obscureText;
   final FormFieldValidator<String>? validator;
-  final ValueChanged<String>? onChanged;
+  final ValueChanged<String>? onChange;
 
-  const VakinhaTextFormField(
+  const VakinhaTextformfield(
       {Key? key,
       required this.label,
       this.controller,
       this.validator,
-      this.onChanged,
+      this.onChange,
       this.obscureText = false})
       : super(key: key);
 
@@ -23,27 +23,28 @@ class VakinhaTextFormField extends StatelessWidget {
       controller: controller,
       obscureText: obscureText,
       validator: validator,
-      onChanged: onChanged,
+      onChanged: onChange,
       cursorColor: context.theme.primaryColor,
       decoration: InputDecoration(
-          isDense: true,
-          labelText: label,
-          labelStyle: const TextStyle(color: Colors.black),
-          errorStyle: const TextStyle(color: Colors.redAccent),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(23),
-            borderSide: BorderSide(color: Colors.grey[400]!),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(23),
-            borderSide: BorderSide(color: Colors.grey[400]!),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(23),
-            borderSide: BorderSide(color: Colors.grey[400]!),
-          ),
-          filled: true,
-          fillColor: Colors.white),
+        isDense: true,
+        labelText: label,
+        labelStyle: const TextStyle(color: Colors.black),
+        errorStyle: const TextStyle(color: Colors.redAccent),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(23),
+          borderSide: BorderSide(color: Colors.grey[400]!),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(23),
+          borderSide: BorderSide(color: Colors.grey[400]!),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(23),
+          borderSide: BorderSide(color: Colors.grey[400]!),
+        ),
+        filled: true,
+        fillColor: Colors.white,
+      ),
     );
   }
 }

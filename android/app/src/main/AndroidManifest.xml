@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.vakinhaburger.app.vakinha_burger_mobile">
+    package="br.com.academiadoflutter.vakinha_burger_mobile">
    <application
         android:label="vakinha_burger_mobile"
         android:name="${applicationName}"
